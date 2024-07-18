@@ -1,0 +1,50 @@
+<div class="container mx-200 py-8">
+  <div class="flex flex-wrap -mx-2">
+    <div class="w-full md:w-1/3 px-4 mb-5">
+        <div class="max-w-sm bg-blue border border-blue-300 rounded-lg shadow white: border-blue-300 white: border-blue-300">
+          <div *ngIf="selectedItem" class=" shadow-lg rounded-lg overflow-hidden mb-6">
+            <img src="{{ selectedItem.imageUrl }}" alt="{{ selectedItem.title }}" class="w-full h-56  object-cover object-center transition duration-500 ease-in-out transform hover:scale-105" >
+            <div class="p-4">
+              <h2 class="text-xl font-semibold font-poppins tracking-wider " style="color: rgb(255, 255, 255);justify-content: center;text-align: center;">{{ selectedItem.title }}</h2>
+              <p class="text-gray-600 mt-2 font-poppins " style="color: rgb(255, 255, 255);justify-content: center;text-align: center;">{{ selectedItem.description }}</p>
+              <p style="color: darkred; font-family: poppins;font-weight: 700; font-size: 15px; text-decoration: underline; margin-top: 5px;justify-content: center;text-align: center;">{{ selectedItem.prix }} TND</p>
+            </div>
+          
+        </div>
+    </div>
+  </div>
+
+
+
+
+  <form class="max-w-md mx-auto" style="justify-content: center;align-items: center;" (submit)="Inscription()">
+    <h1 style="font-family: poppins;font-size: 30px;font-weight: 700;text-align: center;justify-content: center;color: #fff;" class="tracking-widest">Formulaire d'inscription</h1>
+
+    <div class="relative z-0 w-full mb-5 group">
+        <input type="email" [(ngModel)]="email" name="floating_email" id="floating_email" class="block py-2.5 px-0 w-full text-sm text-blue-500 bg-transparent border-0 border-b-2 border-blue-300 appearance-none white:text-white dark:border-blue-600 white:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+        <label for="floating_email"   class="peer-focus:font-medium absolute text-sm text-blue-500 white:text-blue-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:white:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email address</label>
+    </div>
+   
+   
+      <div class="relative z-0 w-full mb-5 group">
+          <input type="text" [(ngModel)]="fullname" name="floating_full_name" id="floating_full_name" class="block py-2.5 px-0 w-full text-sm text-blue-500 bg-transparent border-0 border-b-2 border-blue-300 appearance-none white:text-white dark:border-blue-600 white:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+          <label for="floating_full_name"  class="peer-focus:font-medium absolute text-sm text-blue-500 white:text-blue-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:white:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"  >Full name</label>
+      </div>
+      
+    
+
+    <div class="grid md:grid-cols-2 md:gap-6">
+      <div class="relative z-0 w-full mb-5 group">
+          <input type="tel"  name="floating_phone" id="floating_phone" class="block py-2.5 px-0 w-full text-sm text-blue-500 bg-transparent border-0 border-b-2 border-blue-300 appearance-none white:text-white dark:border-blue-600 white:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+          <label for="floating_phone" class="peer-focus:font-medium absolute text-sm text-blue-500 white:text-blue-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:white:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Phone number</label>
+      </div>
+      <div class="relative z-0 w-full mb-5 group">
+          <input type="text" name="floating_company" id="floating_company" class="block py-2.5 px-0 w-full text-sm text-blue-500 bg-transparent border-0 border-b-2 border-blue-300 appearance-none white:text-white dark:border-blue-600 white:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+          <label for="floating_company" class="peer-focus:font-medium absolute text-sm text-blue-500 white:text-blue-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:white:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Company (Ex. Google)</label>
+      </div>
+    </div>
+    <button type="submit" class="text-white bg-gradient-to-r from-cyan-300 to-orange-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2" style="margin-left: 185px;" (click)="Inscription()">Inscrire</button>
+  </form>
+  
+    </div>
+  </div>

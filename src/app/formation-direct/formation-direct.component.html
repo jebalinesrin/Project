@@ -1,0 +1,18 @@
+
+<div class="container mx-auto py-8 ">
+    <div style="border-radius: 70px; background: linear-gradient(60deg,rgb(0, 195, 255),rgb(246, 186, 74),#fff);">
+        <h1 style="font-family:Audiowide,sans-serif;font-weight: bold;font-style: tech-oriented  ;font-size: 30px;font-weight: 600;color: rgb(255, 255, 255);margin-top: 20px;text-align: center;">Les Formations De Devellopement Web</h1>
+        <p style="font-family:Audiowide,sans-serif;font-weight: bold;font-style: tech-oriented  ;font-size: 14px;font-weight: 400;color: rgb(255, 255, 255);text-align: center;">Apprenez en interagissant avec les formateurs.</p>
+    </div>    
+  <br>
+    <div class="grid gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div *ngFor="let DEV of DEVWEBItem"class="shadow-lg rounded-lg overflow-hidden mb-6">
+        
+        <img src="{{ DEV.imageUrl }}" alt="{{ DEV.title }}" class="w-full h-56 object-cover object-center transition duration-500 ease-in-out transform hover:scale-105">
+        <div class="p-4">
+          <button (click)="onReadMore(DEV.id)"><h2 class="text-xl font-semibold text-gray-800 font-poppins tracking-wider ">{{ DEV.title }}</h2></button>
+          <p class="text-gray-600 mt-2 font-poppins ">{{ DEV.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>

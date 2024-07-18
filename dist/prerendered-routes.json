@@ -1,0 +1,11 @@
+{
+  "routes": [
+    "/",
+    "/About",
+    "/Blog",
+    "/direct",
+    "/Langue",
+    "/register",
+    "/Sign"
+  ]
+}
